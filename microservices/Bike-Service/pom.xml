@@ -15,6 +15,7 @@
     <quarkus.platform.version>3.4.3</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.1.2</surefire-plugin.version>
+             <spring-cloud.version>2022.0.4</spring-cloud.version>
   </properties>
   <dependencyManagement>
     <dependencies>
