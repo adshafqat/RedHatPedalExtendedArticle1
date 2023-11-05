@@ -5,7 +5,7 @@
   <groupId>org.acme</groupId>
   <artifactId>bike-service</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-<properties>
+  <properties>
     <compiler-plugin.version>3.11.0</compiler-plugin.version>
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,7 +15,6 @@
     <quarkus.platform.version>3.4.3</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.1.2</surefire-plugin.version>
-             <spring-cloud.version>2022.0.4</spring-cloud.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -26,13 +25,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>2022.0.4</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>	    
     </dependencies>
   </dependencyManagement>
   <dependencies>
@@ -94,62 +86,7 @@
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-			<version>3.1.3</version>
-		</dependency>
-		<dependency>
-		        <groupId>org.springframework.boot</groupId>
-		        <artifactId>spring-boot-starter-data-mongodb</artifactId>
-			<version>3.1.3</version>
-		</dependency>
-
-	  
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-			<version>1.18.30</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-			<version>3.1.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.1.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-			<version>4.0.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>3.1.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-			<version>42.6.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-			<version>3.1.3</version>
-		</dependency>
-
   </dependencies>
- 
   <build>
     <plugins>
       <plugin>
@@ -220,17 +157,5 @@
         <quarkus.package.type>native</quarkus.package.type>
       </properties>
     </profile>
-    <profile>
-      <id>openshift</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.eclipse.jkube</groupId>
-            <artifactId>openshift-maven-plugin</artifactId>
-            <version>1.13.0</version>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>      
   </profiles>
 </project>
